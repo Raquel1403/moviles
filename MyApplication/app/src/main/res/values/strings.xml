@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="comienzo">¡Hola mundo!</string>
+    <string name="act2">Estás en la Activity2</string>
+</resources>
