@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">act5_1</string>
+    <string name="bt1">Texto construido desde el XML \nTamaño 20dp, Bold, color Red</string>
+    <string name="bt2">Texto construido desde el XML \nTamaño 20dp, Itálic, color Blue</string>
+    <string name="bt3">Texto construido desde el XML</string>
+    <string name="bt4">Texto escrito con fuente Umbrella</string>
+</resources>

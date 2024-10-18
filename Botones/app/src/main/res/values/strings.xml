@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Botones</string>
+    <string name="bot_n_sin_pulsar">BOTÓN SIN PULSAR</string>
+    <string name="bot_n_1">BOTÓN 1</string>
+    <string name="bot_n_2">BOTÓN 2</string>
+    <string name="bot">BOTÓN</string>
+    <string name="ejemplo1">EJEMPLO 1</string>
+    <string name="ejemplo2">EJEMPLO 2</string>
+    <string name="bot_n_1_pulsado">BOTÓN 1 PULSADO</string>
+    <string name="bot_n_2_pulsado">BOTÓN 2 PULSADO</string>
+</resources>

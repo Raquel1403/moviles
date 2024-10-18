@@ -7,29 +7,45 @@
     android:orientation="horizontal" >
     <Button
         android:layout_column="3"
-        android:text="/" />
-    <Button android:text="1" />
-    <Button android:text="2" />
-    <Button android:text="3" />
-    <Button android:text="*" />
-    <Button android:text="4" />
-    <Button android:text="5" />
-    <Button android:text="6" />
-    <Button android:text="-" />
-    <Button android:text="7" />
-    <Button android:text="8" />
-    <Button android:text="9" />
+        android:text="/"
+        android:backgroundTint="#3DD6E9"/>/>
+    <Button android:text="1"
+        android:backgroundTint="#F293B3"/>/>
+    <Button android:text="2"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="3"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="*"
+        android:backgroundTint="#3DD6E9"/>
+    <Button android:text="4"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="5"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="6"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="-"
+        android:backgroundTint="#3DD6E9"/>
+    <Button android:text="7"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="8"
+        android:backgroundTint="#F293B3"/>
+    <Button android:text="9"
+        android:backgroundTint="#F293B3"/>
     <Button
         android:layout_gravity="fill"
         android:layout_rowSpan="3"
-        android:text="+" />
+        android:text="+"
+        android:backgroundTint="#3DD6E9"/>/>
     <Button
         android:layout_columnSpan="2"
         android:layout_gravity="fill"
-        android:text="0" />
-    <Button android:text="00" />
+        android:text="0"
+        android:backgroundTint="#3DD6E9"/>/>
+    <Button android:text="00"
+        android:backgroundTint="#3DD6E9"/>/>
     <Button
         android:layout_columnSpan="3"
         android:layout_gravity="fill"
-        android:text="=" />
+        android:text="="
+        android:backgroundTint="#3DD6E9"/>
 </GridLayout>
