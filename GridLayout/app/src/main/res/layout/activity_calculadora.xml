@@ -10,120 +10,128 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="341dp"
+        style="@style/MiVisorStyle"
+        android:layout_width="358dp"
         android:layout_height="wrap_content"
-        android:layout_row="0"
-        android:layout_column="0"
         android:layout_columnSpan="4"
-        android:text="@string/defecto"
-        android:textAlignment="textEnd"
-        android:textColor="#3F51B5"/>
+        android:layout_gravity="right"
+        android:background="#FFFFFF"
+        android:hint="@string/defecto"
+        android:inputType="none"
+        android:textColor="#3F51B5" />
+
 
     <Button
         android:id="@+id/BotonPotencia"
-        android:backgroundTint="#3DD6E9"
-        android:text="^"/>
+        android:text="^"
+        style="@style/MyMaterialButtonStyle"/>
 
     <Button
         android:id="@+id/Boton1"
+        style="@style/MyMaterialButtonStyle"
         android:backgroundTint="#F293B3"
         android:text="1"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="1"/>
 
     <Button
         android:id="@+id/Boton2"
         android:backgroundTint="#F293B3"
         android:text="2"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="2"
+        style="@style/MyMaterialButtonStyle" />
 
     <Button
         android:id="@+id/Boton3"
         android:backgroundTint="#F293B3"
         android:text="3"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="3"
+        style="@style/MyMaterialButtonStyle"/>
 
     <Button
         android:id="@+id/BotonMultiplicar"
         android:backgroundTint="#3DD6E9"
-        android:text="*" />
+        android:text="*"
+        style="@style/MyMaterialButtonStyle"/>
 
     <Button
         android:id="@+id/Boton4"
         android:backgroundTint="#F293B3"
         android:text="4"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="4"
+        style="@style/MyMaterialButtonStyle" />
 
     <Button
         android:id="@+id/Boton5"
         android:backgroundTint="#F293B3"
         android:text="5"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="5"
+        style="@style/MyMaterialButtonStyle"/>
 
     <Button
         android:id="@+id/Boton6"
         android:backgroundTint="#F293B3"
         android:text="6"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="6"
+        style="@style/MyMaterialButtonStyle" />
 
     <Button
         android:id="@+id/BotonResta"
         android:backgroundTint="#3DD6E9"
-        android:text="-" />
+        android:text="-"
+        style="@style/MyMaterialButtonStyleBis"/>
 
     <Button
         android:id="@+id/Boton7"
         android:backgroundTint="#F293B3"
         android:text="7"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="7"
+        style="@style/MyMaterialButtonStyleBis" />
 
     <Button
         android:id="@+id/Boton8"
         android:backgroundTint="#F293B3"
         android:text="8"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="8"
+        style="@style/MyMaterialButtonStyleBis" />
 
     <Button
         android:id="@+id/Boton9"
         android:backgroundTint="#F293B3"
         android:text="9"
-        android:layout_margin="2dp"
-        app:cornerRadius="0dp" />
+        android:tag="9"
+        style="@style/MyMaterialButtonStyleBis" />
 
     <Button
         android:id="@+id/BotonSuma"
-        android:layout_rowSpan="3"
         android:layout_gravity="fill"
         android:backgroundTint="#3DD6E9"
-        android:text="+" />
+        android:text="+"
+        style="@style/MyMaterialButtonStyleBis"/>
     <Button
         android:id="@+id/BotonDividir"
-        android:layout_columnSpan="1"
         android:layout_gravity="fill"
         android:backgroundTint="#3DD6E9"
-        android:text="/" />
+        android:text="/"
+        style="@style/MyMaterialButtonStyleBis"/>
     <Button
         android:layout_gravity="fill"
         android:backgroundTint="#3DD6E9"
-        android:text="." />
+        android:text="."
+        style="@style/MyMaterialButtonStyleBis"/>
 
     <Button
         android:id="@+id/Boton0"
         android:backgroundTint="#3DD6E9"
-        android:text="0"/>
+        android:text="0"
+        android:tag="0"
+        style="@style/MyMaterialButtonStyleBis"/>
 
     <Button
         android:id="@+id/BotonIgual"
         android:layout_columnSpan="4"
         android:layout_gravity="fill"
         android:backgroundTint="#3DD6E9"
-        android:text="=" />
+        android:text="="
+        style="@style/MyMaterialButtonStyle"/>
 
 </GridLayout>

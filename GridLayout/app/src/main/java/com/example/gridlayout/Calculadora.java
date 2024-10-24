@@ -8,9 +8,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class Calculadora extends AppCompatActivity implements View.OnClickListener {
     EditText editText;
+    String operador = ""; // Para almacenar el operador
+    double primerNumero = 0; // Para almacenar el primer número
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class Calculadora extends AppCompatActivity implements View.OnClickListen
         botonDividir.setOnClickListener(this);
         Button botonPotencia = (Button) findViewById(R.id.BotonPotencia);
         botonPotencia.setOnClickListener(this);
+        Button botonIgual = (Button) findViewById(R.id.BotonIgual);
+        botonIgual.setOnClickListener(this);
         Button boton0 = (Button) findViewById(R.id.Boton0);
         boton0.setOnClickListener(this);
         Button boton1 = (Button) findViewById(R.id.Boton1);
@@ -56,62 +59,69 @@ public class Calculadora extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-
         String numero = editText.getText().toString();
 
+        // Verificar qué botón se ha pulsado
         if (view.getId() == R.id.BotonSuma) {
-            editText.setText(numero);
-            int n = Integer.parseInt(String.valueOf(numero));
-            sumar(n);
-        } else if (view.getId() == R.id.Boton0) {
-            editText.setText("0");
-        } else if (view.getId() == R.id.Boton1) {
-            editText.setText("1");
-        } else if (view.getId() == R.id.Boton2) {
-            editText.setText("2");
-        } else if (view.getId() == R.id.Boton3) {
-            editText.setText("3");
-        } else if (view.getId() == R.id.Boton4) {
-            editText.setText("4");
-        } else if (view.getId() == R.id.Boton5) {
-            editText.setText("5");
-        } else if (view.getId() == R.id.Boton6) {
-            editText.setText("6");
-        } else if (view.getId() == R.id.Boton7) {
-            editText.setText("7");
-        } else if (view.getId() == R.id.Boton8) {
-            editText.setText("8");
-        } else if (view.getId() == R.id.Boton9) {
-            editText.setText("9");
+            primerNumero = Double.parseDouble(numero);
+            operador = "+";
+            editText.setText(""); // Limpia el campo para el siguiente número
         } else if (view.getId() == R.id.BotonResta) {
-            editText.setText(numero);
-
+            primerNumero = Double.parseDouble(numero);
+            operador = "-";
+            editText.setText("");
         } else if (view.getId() == R.id.BotonMultiplicar) {
-            editText.setText(numero);
-
+            primerNumero = Double.parseDouble(numero);
+            operador = "*";
+            editText.setText("");
         } else if (view.getId() == R.id.BotonDividir) {
-            editText.setText(numero);
-
-        } else if (view.getId() == R.id.BotonPotencia) {
-            editText.setText(numero);
+            primerNumero = Double.parseDouble(numero);
+            operador = "/";
+            editText.setText("");
         } else if (view.getId() == R.id.BotonIgual) {
-            editText.setText(numero);
+            double segundoNumero = Double.parseDouble(numero);
+            double resultado = 0;
+
+            switch (operador) {
+                case "+":
+                    resultado = sumar(primerNumero, segundoNumero);
+                    break;
+                case "-":
+                    resultado = restar(primerNumero, segundoNumero);
+                    break;
+                case "*":
+                    resultado = multiplicar(primerNumero, segundoNumero);
+                    break;
+                case "/":
+                    if (segundoNumero != 0) {
+                        resultado = dividir(primerNumero, segundoNumero);
+                    } else {
+                        editText.setText("Error"); // Manejo de división por cero
+                        return;
+                    }
+                    break;
+            }
+
+            editText.setText(String.valueOf(resultado)); // Mostrar el resultado
+        } else {
+            // Agregar números al EditText
+            editText.setText(numero + view.getTag().toString()); // Asume que los botones tienen su tag como el número
         }
     }
 
-    public void sumar(int n){
-
+    public double sumar(double a, double b) {
+        return a + b;
     }
-    public void restar(){
 
+    public double restar(double a, double b) {
+        return a - b;
     }
-    public void multiplicar(){
 
+    public double multiplicar(double a, double b) {
+        return a * b;
     }
-    public void dividir(){
 
-    }
-    public void igualar(){
-
+    public double dividir(double a, double b) {
+        return a / b;
     }
 }
