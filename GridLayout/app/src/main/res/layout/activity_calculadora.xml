@@ -1,51 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:columnCount="4"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="4"
+        android:text="@string/defecto"
+        android:textAlignment="textEnd"
+        android:textColor="#3F51B5"/>
+
     <Button
-        android:layout_column="3"
-        android:text="/"
-        android:backgroundTint="#3DD6E9"/>/>
-    <Button android:text="1"
-        android:backgroundTint="#F293B3"/>/>
-    <Button android:text="2"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="3"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="*"
-        android:backgroundTint="#3DD6E9"/>
-    <Button android:text="4"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="5"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="6"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="-"
-        android:backgroundTint="#3DD6E9"/>
-    <Button android:text="7"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="8"
-        android:backgroundTint="#F293B3"/>
-    <Button android:text="9"
-        android:backgroundTint="#F293B3"/>
+        android:id="@+id/BotonPotencia"
+        android:backgroundTint="#3DD6E9"
+        android:text="^"/>
+
     <Button
-        android:layout_gravity="fill"
+        android:id="@+id/Boton1"
+        android:backgroundTint="#F293B3"
+        android:text="1"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton2"
+        android:backgroundTint="#F293B3"
+        android:text="2"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton3"
+        android:backgroundTint="#F293B3"
+        android:text="3"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/BotonMultiplicar"
+        android:backgroundTint="#3DD6E9"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/Boton4"
+        android:backgroundTint="#F293B3"
+        android:text="4"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton5"
+        android:backgroundTint="#F293B3"
+        android:text="5"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton6"
+        android:backgroundTint="#F293B3"
+        android:text="6"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/BotonResta"
+        android:backgroundTint="#3DD6E9"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/Boton7"
+        android:backgroundTint="#F293B3"
+        android:text="7"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton8"
+        android:backgroundTint="#F293B3"
+        android:text="8"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Boton9"
+        android:backgroundTint="#F293B3"
+        android:text="9"
+        android:layout_margin="2dp"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/BotonSuma"
         android:layout_rowSpan="3"
-        android:text="+"
-        android:backgroundTint="#3DD6E9"/>/>
-    <Button
-        android:layout_columnSpan="2"
         android:layout_gravity="fill"
-        android:text="0"
-        android:backgroundTint="#3DD6E9"/>/>
-    <Button android:text="00"
-        android:backgroundTint="#3DD6E9"/>/>
+        android:backgroundTint="#3DD6E9"
+        android:text="+" />
     <Button
-        android:layout_columnSpan="3"
+        android:id="@+id/BotonDividir"
+        android:layout_columnSpan="1"
         android:layout_gravity="fill"
-        android:text="="
-        android:backgroundTint="#3DD6E9"/>
+        android:backgroundTint="#3DD6E9"
+        android:text="/" />
+    <Button
+        android:layout_gravity="fill"
+        android:backgroundTint="#3DD6E9"
+        android:text="." />
+
+    <Button
+        android:id="@+id/Boton0"
+        android:backgroundTint="#3DD6E9"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/BotonIgual"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill"
+        android:backgroundTint="#3DD6E9"
+        android:text="=" />
+
 </GridLayout>

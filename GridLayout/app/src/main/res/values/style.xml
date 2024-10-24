@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyMaterialButtonStyle" parent="Widget.MaterialComponents.Button"></style>
+    <style name="MyMaterialButtonStyleBis" parent="Widget.MaterialComponents.Button"></style>
+    <style name="MiVisorStyle" parent="Widget.MaterialComponents.Button"></style>
+</resources>
