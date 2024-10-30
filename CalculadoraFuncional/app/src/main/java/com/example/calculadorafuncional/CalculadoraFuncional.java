@@ -8,110 +8,133 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class CalculadoraFuncional extends AppCompatActivity implements View.OnClickListener {
     EditText editText;
+    double operando1 = 0;
+    String operacion = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = (EditText) findViewById(R.id.editText);
+        editText = findViewById(R.id.nombre);
 
-        Button botonSuma = (Button) findViewById(R.id.BotonSuma);
-        botonSuma.setOnClickListener(this);
-        Button botonResta = (Button) findViewById(R.id.BotonResta);
-        botonResta.setOnClickListener(this);
-        Button botonMultiplicar = (Button) findViewById(R.id.BotonMultiplicar);
-        botonMultiplicar.setOnClickListener(this);
-        Button botonDividir = (Button) findViewById(R.id.BotonDividir);
-        botonDividir.setOnClickListener(this);
-        Button botonPotencia = (Button) findViewById(R.id.BotonPotencia);
-        botonPotencia.setOnClickListener(this);
-        Button boton0 = (Button) findViewById(R.id.Boton0);
-        boton0.setOnClickListener(this);
-        Button boton1 = (Button) findViewById(R.id.Boton1);
-        boton1.setOnClickListener(this);
-        Button boton2 = (Button) findViewById(R.id.Boton2);
-        boton2.setOnClickListener(this);
-        Button boton3 = (Button) findViewById(R.id.Boton3);
-        boton3.setOnClickListener(this);
-        Button boton4 = (Button) findViewById(R.id.Boton4);
-        boton4.setOnClickListener(this);
-        Button boton5 = (Button) findViewById(R.id.Boton5);
-        boton5.setOnClickListener(this);
-        Button boton6 = (Button) findViewById(R.id.Boton6);
-        boton6.setOnClickListener(this);
-        Button boton7 = (Button) findViewById(R.id.Boton7);
-        boton7.setOnClickListener(this);
-        Button boton8 = (Button) findViewById(R.id.Boton8);
-        boton8.setOnClickListener(this);
-        Button boton9 = (Button) findViewById(R.id.Boton9);
-        boton9.setOnClickListener(this);
+        // Array con los ID de los botones de operaciones
+        int[] botonesOperaciones = {
+                R.id.BotonSuma,
+                R.id.BotonResta,
+                R.id.BotonMultiplicar,
+                R.id.BotonDividir,
+                R.id.BotonPotencia,
+                R.id.BotonIgual,
+                R.id.BotonBorrar,
+                R.id.BotonDecimal
+        };
 
+        for (int id : botonesOperaciones) {
+            Button boton = findViewById(id);
+            boton.setOnClickListener(this);
+        }
+
+        // Array con los ID de los botones numéricos
+        int[] botonesNumeros = {
+                R.id.Boton0, R.id.Boton1, R.id.Boton2, R.id.Boton3, R.id.Boton4,
+                R.id.Boton5, R.id.Boton6, R.id.Boton7, R.id.Boton8, R.id.Boton9
+        };
+
+        // Bucle para asignar cada botón a su posición en el array
+        for (int id : botonesNumeros) {
+            Button boton = findViewById(id);
+            boton.setOnClickListener(this);
+        }
+
+/*
         Typeface miFuente = Typeface.createFromAsset(getAssets(), "fonts/colour.ttf");
-        editText.setTypeface(miFuente);
+        editText.setTypeface(miFuente);*/
     }
 
     @Override
     public void onClick(View view) {
-
         String numero = editText.getText().toString();
 
-        if (view.getId() == R.id.BotonSuma) {
-            editText.setText(numero);
-            int n = Integer.parseInt(String.valueOf(numero));
-            sumar(n);
-        } else if (view.getId() == R.id.Boton0) {
-            editText.setText("0");
+        // Condiciones para los botones de números
+        if (view.getId() == R.id.Boton0) {
+            editText.append("0");
         } else if (view.getId() == R.id.Boton1) {
-            editText.setText("1");
+            editText.append("1");
         } else if (view.getId() == R.id.Boton2) {
-            editText.setText("2");
+            editText.append("2");
         } else if (view.getId() == R.id.Boton3) {
-            editText.setText("3");
+            editText.append("3");
         } else if (view.getId() == R.id.Boton4) {
-            editText.setText("4");
+            editText.append("4");
         } else if (view.getId() == R.id.Boton5) {
-            editText.setText("5");
+            editText.append("5");
         } else if (view.getId() == R.id.Boton6) {
-            editText.setText("6");
+            editText.append("6");
         } else if (view.getId() == R.id.Boton7) {
-            editText.setText("7");
+            editText.append("7");
         } else if (view.getId() == R.id.Boton8) {
-            editText.setText("8");
+            editText.append("8");
         } else if (view.getId() == R.id.Boton9) {
-            editText.setText("9");
+            editText.append("9");
+        }
+        // Condiciones para los botones de operaciones
+        else if (view.getId() == R.id.BotonSuma) {
+            operacion = "suma";
+            operando1 = Double.parseDouble(numero); // Cambio a Double
+            editText.setText("");
         } else if (view.getId() == R.id.BotonResta) {
-            editText.setText(numero);
-
+            operacion = "resta";
+            operando1 = Double.parseDouble(numero);
+            editText.setText("");
         } else if (view.getId() == R.id.BotonMultiplicar) {
-            editText.setText(numero);
-
+            operacion = "multiplicacion";
+            operando1 = Double.parseDouble(numero);
+            editText.setText("");
         } else if (view.getId() == R.id.BotonDividir) {
-            editText.setText(numero);
-
+            operacion = "division";
+            operando1 = Double.parseDouble(numero);
+            editText.setText("");
         } else if (view.getId() == R.id.BotonPotencia) {
-            editText.setText(numero);
+            operacion = "potencia";
+            operando1 = Double.parseDouble(numero);
+            editText.setText("");
+        } else if (view.getId() == R.id.BotonBorrar) {
+            operacion = "borrar";
+            editText.setText("");
+        } else if (view.getId() == R.id.BotonDecimal) {
+            // Verificar si ya hay un punto decimal
+            if (!numero.contains(".")) {
+                editText.append(".");
+            }
         } else if (view.getId() == R.id.BotonIgual) {
-            editText.setText(numero);
+            double operando2 = Double.parseDouble(editText.getText().toString());
+            calcularResultado(operando1, operando2, operacion);
         }
     }
 
-    public void sumar(int n){
 
-    }
-    public void restar(){
+    private void calcularResultado(double operando1, double operando2, String operacion) {
+        double resultado = 0;
 
-    }
-    public void multiplicar(){
+        if (operacion.equals("suma")) {
+            resultado = operando1 + operando2;
+        } else if (operacion.equals("resta")) {
+            resultado = operando1 - operando2;
+        } else if (operacion.equals("multiplicacion")) {
+            resultado = operando1 * operando2;
+        } else if (operacion.equals("division")) {
+            if (operando2 != 0) {
+                resultado = operando1 / operando2;
+            } else {
+                resultado = 0;  // Manejo básico de división por cero
+            }
+        } else if (operacion.equals("potencia")) {
+            resultado = Math.pow(operando1, operando2);
+        }
 
-    }
-    public void dividir(){
-
-    }
-    public void igualar(){
-
+        editText.setText(String.valueOf(resultado));
     }
 }
