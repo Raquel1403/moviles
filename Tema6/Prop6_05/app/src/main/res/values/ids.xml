@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lunes" type="id" />
+    <item name="martes" type="id" />
+    <item name="miercoles" type="id" />
+    <item name="enero" type="id" />
+    <item name="febrero" type="id" />
+    <item name="marzo" type="id" />
+</resources>
