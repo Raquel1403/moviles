@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Figura6_9</string>
+    <string name="MENU1A">OPCIÓN 1 DE MENÚ DE LISTA A</string>
+    <string name="MENU2A">OPCIÓN 2 DE MENÚ DE LISTA A</string>
 </resources>

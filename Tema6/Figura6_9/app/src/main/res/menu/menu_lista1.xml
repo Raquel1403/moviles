@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/opcion1"
-        android:title="Primera opción" />
+        android:id="@+id/ListaOpA1"
+        android:title="@string/MENU1A" />
     <item
-        android:id="@+id/opcion2"
-        android:title="Segunda opción" />
+        android:id="@+id/ListaOpA2"
+        android:title="@string/MENU2A" />
+
 </menu>
